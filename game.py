@@ -15,7 +15,7 @@ def hangman():
     valid_word = get_valid_word(words_dictionary) #retrieveing a valid word
     word_letters = set(valid_word) #get the word as a set
     alphabet = set(string.ascii_uppercase) #all ascii letter in eglish
-    used_letters = set()  #letters already entered by the user
+    used_letters = set()  #letters already entered by the user  
 
     while len(word_letters) > 0:
         #getting user's input
