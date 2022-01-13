@@ -17,16 +17,19 @@ def hangman():
     alphabet = set(string.ascii_uppercase) #all ascii letter in eglish
     used_letters = set()  #letters already entered by the user
 
-    #getting user's input
-    user_letter = input('Guess a letter').upper()
-    if user_letter in alphabet - used_letters:
-        used_letters.add(user_letter)
-        if user_letter in word_letters:
-            word_letters.remove(user_letter)
-        elif user_letter in used_letters:
-            print("you've alreadu used that character")
-        else:
-            print("worng character")
+    while len(word_letters) > 0:
+        #getting user's input
+        user_letter = input('Guess a letter : \N').upper()
+        if user_letter in alphabet - used_letters:
+            used_letters.add(user_letter)
+            if user_letter in word_letters:
+                word_letters.remove(user_letter)
+            elif user_letter in used_letters:
+                print("you've alreadY used that character")
+            else:
+                print("worng character")
+
+hangman()
 
 
 
